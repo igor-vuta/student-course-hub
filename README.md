@@ -24,7 +24,7 @@ Prospective students browse programmes and their module breakdowns, and register
 ## 🛡️ Security model
 
 - Passwords hashed with **bcrypt**; server-side sessions in an 8-hour-TTL store with `crypto.randomUUID()` tokens
-- **CSRF protection** — per-browser token, checked on every mutating request
+- **CSRF protection** — per-browser token issued by middleware and verified on sign-in; sessions ride `sameSite=lax` cookies
 - Role-based authorization middleware (`requireAuth`, `requireRole`)
 - HTML escaping on all rendered data; parameterized SQL throughout
 
