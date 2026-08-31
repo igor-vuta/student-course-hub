@@ -1,0 +1,26 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - name: Type-check
+        run: deno check src/main.ts
+      - name: Boot smoke test
+        run: |
+          deno task start &
+          for i in $(seq 1 20); do
+            curl -sf http://localhost:8000/login > /dev/null && break
+            sleep 1
+          done
+          curl -sf http://localhost:8000/login | grep -q "Administrator sign in"
+          curl -sf http://localhost:8000/programmes > /dev/null

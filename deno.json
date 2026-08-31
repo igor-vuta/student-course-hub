@@ -1,0 +1,17 @@
+{
+  "tasks": {
+    "dev": "deno run --watch --allow-net --allow-read --allow-write --allow-env src/main.ts",
+    "start": "deno run --allow-net --allow-read --allow-write --allow-env src/main.ts"
+  },
+  "imports": {
+    "@oak/oak": "https://deno.land/x/oak@v12.6.1/mod.ts",
+    "@std/html": "jsr:@std/html@^1.0.0",
+    "@sqlite": "https://deno.land/x/sqlite@v3.9.1/mod.ts",
+    "bcrypt": "https://deno.land/x/bcrypt@v0.4.1/mod.ts"
+  },
+  "fmt": {
+    "lineWidth": 250,
+    "semiColons": true,
+    "singleQuote": false
+  }
+}

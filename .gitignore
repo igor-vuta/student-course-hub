@@ -1,0 +1,6 @@
+# runtime state - recreated and seeded on first boot
+student_hub.db
+*.db
+
+.DS_Store
+.vscode/
