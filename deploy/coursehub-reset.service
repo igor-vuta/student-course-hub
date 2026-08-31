@@ -1,0 +1,6 @@
+[Unit]
+Description=Nightly demo-data reset for Student Course Hub
+
+[Service]
+Type=oneshot
+ExecStart=/bin/sh -c 'systemctl stop coursehub && rm -f /opt/coursehub/data/student_hub.db && systemctl start coursehub'

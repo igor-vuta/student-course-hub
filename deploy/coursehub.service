@@ -1,0 +1,24 @@
+[Unit]
+Description=Student Course Hub (Deno)
+After=network.target
+
+[Service]
+User=coursehub
+Group=coursehub
+WorkingDirectory=/opt/coursehub/repo
+Environment=PORT=4100
+Environment=APP_ENV=production
+Environment=DB_PATH=/opt/coursehub/data/student_hub.db
+ExecStart=/usr/local/bin/deno run --allow-net --allow-read --allow-write --allow-env src/main.ts
+Restart=always
+RestartSec=3
+
+# hardening (mirrors the drivepro unit)
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+ReadWritePaths=/opt/coursehub/data
+
+[Install]
+WantedBy=multi-user.target
