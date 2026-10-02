@@ -11,6 +11,12 @@
 
 <!-- project-presentation:end -->
 
+<!-- project-pattern:start -->
+
+![A graduation cap with a diamond top, fitted band, and tassel.](.github/project-pattern.svg)
+
+<!-- project-pattern:end -->
+
 <div align="center">
 
 # 🎓 Student Course Hub
