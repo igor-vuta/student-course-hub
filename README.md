@@ -1,3 +1,16 @@
+<!-- project-presentation:start -->
+
+![Student Course Hub — Server-rendered university course catalogue](.github/readme-header.svg)
+
+[![Last commit](https://img.shields.io/github/last-commit/igor-vuta/student-course-hub?style=flat-square&color=6366f1)](https://github.com/igor-vuta/student-course-hub/commits)
+[![Repository size](https://img.shields.io/github/repo-size/igor-vuta/student-course-hub?style=flat-square&color=6366f1)](https://github.com/igor-vuta/student-course-hub)
+
+**8** Seed programmes · **27** Seed modules · **SQLite** Database
+
+*Project facts checked 2 October 2026. Activity badges update from GitHub.*
+
+<!-- project-presentation:end -->
+
 <div align="center">
 
 # 🎓 Student Course Hub
